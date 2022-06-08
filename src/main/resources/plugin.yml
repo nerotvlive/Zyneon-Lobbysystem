@@ -1,0 +1,90 @@
+name: Lobbysystem
+version: 3.4.4 (E594)
+website: https://nerotv.live/lobbysystem
+api-version: 1.18
+description: Lobbysystem by nerotvlive
+author: nerotvlive
+main: live.nerotv.Preloader
+
+depend:
+  - ZyneonAPI
+
+softdepend:
+  - floodgate
+  - GSit
+
+commands:
+  Build:
+    description: Command to toggle the build mode
+  Ping:
+    description: Command to show your ping
+  Fly:
+    description: Command to toggle your flight mode
+  Warp:
+    description: Command to create, toggle or teleport to a warp
+    aliases: [warps,warp]
+  World:
+    description: Command to change the world
+    aliases: [map]
+  GameMode:
+    description: Command to change the gamemode
+    aliases: [gm,mode]
+  Disconnect:
+    description: Command to leave the server
+    aliases: [disc,dc]
+  Settings:
+    description: Command to open the settings menu
+  Force:
+    description: Command to force stop or force reload the server
+  Pixels:
+    description: Command to play PIXELS
+  Back:
+    description: Command to leave PIXELS
+  Spawn:
+    description: Command to go to the spawn
+  Goto:
+    description: Command to switch the server
+    aliases: [direct]
+  SRL:
+    description: Command to stop the server
+  Friends:
+    description: Command to open the friends menu
+    aliases: [friendsgui,hide,hider,playerhide,playerhider,fgui]
+  Nametags:
+    description: Command to disable the nametags
+  Tell:
+    description: Sends a private message to another player
+    aliases: [w,whisper,t]
+  Teleport:
+    description: Teleports a player
+    aliases: [tp]
+  Broadcast:
+    description: Broadcasts a message
+    aliases: [bc,broad,cast,broadc]
+  Clearchat:
+    description: Clears the chat
+    aliases: [cc,clearc,chatc,chatclear]
+  Day:
+    description: Sets the time to day
+  Night:
+    description: Sets the time to night
+  Time:
+    description: Sets the time
+  Speed:
+    description: Changes the speed
+  Rain:
+    description: Sets the weather to rain
+  Sun:
+    description: Sets the weather to sun
+  Thunder:
+    description: Sets the weather to thunder
+  Weather:
+    description: Sets the weather
+  Hologram:
+    description: Manages the holograms
+    aliases: [holo,hologramm]
+  Test:
+    description: Testing command
+  Jumper:
+    description: Command to start the unlimited Jump and Run
+    aliases: [jump,run,jumpandrun,jumpnrun,jnr,jr,jumprun]
