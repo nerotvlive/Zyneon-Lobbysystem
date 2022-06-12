@@ -121,6 +121,7 @@ public class GUIManager {
             MapsInventory.setItem(25, ItemManager.Placeholder);
             MapsInventory.setItem(26, ItemManager.Placeholder);
             if (!PlayerAPI.hasAnimations(p)) {
+                MapsInventory.setItem(12, ItemManager.PixelsJun22);
                 MapsInventory.setItem(11, ItemManager.PixelsApr22);
                 MapsInventory.setItem(10, ItemManager.PixelsJan22);
                 MapsInventory.setItem(9, ItemManager.PixelsAug21);
@@ -131,36 +132,39 @@ public class GUIManager {
                 MapsInventory.setItem(1, ItemManager.Primal2_2);
                 MapsInventory.setItem(0, ItemManager.Primal2_1);
             } else {
-                new Countdown(9, Main.get()) {
+                new Countdown(10, Main.get()) {
                     @Override
                     public void count(int time) {
                         if (p.getOpenInventory().getTopInventory() == MapsInventory) {
-                            if (time == 8) {
+                            if (time == 9) {
                                 MapsInventory.setItem(0, ItemManager.Primal2_1);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
-                            } else if (time == 7) {
+                            } else if (time == 8) {
                                 MapsInventory.setItem(1, ItemManager.Primal2_2);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
-                            } else if (time == 6) {
+                            } else if (time == 7) {
                                 MapsInventory.setItem(2, ItemManager.Primal3_3);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
-                            } else if (time == 5) {
+                            } else if (time == 6) {
                                 MapsInventory.setItem(3, ItemManager.Primal3_2);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
-                            } else if (time == 4) {
+                            } else if (time == 5) {
                                 MapsInventory.setItem(4, ItemManager.Primal3_1);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
-                            } else if (time == 3) {
+                            } else if (time == 4) {
                                 MapsInventory.setItem(5, ItemManager.Argria1);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
-                            } else if (time == 2) {
+                            } else if (time == 3) {
                                 MapsInventory.setItem(9, ItemManager.PixelsAug21);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
-                            } else if (time == 1) {
+                            } else if (time == 2) {
                                 MapsInventory.setItem(10, ItemManager.PixelsJan22);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
-                            } else if (time == 0) {
+                            } else if (time == 1) {
                                 MapsInventory.setItem(11, ItemManager.PixelsApr22);
+                                p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
+                            } else if (time == 0) {
+                                MapsInventory.setItem(11, ItemManager.PixelsJun22);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             }
                         }

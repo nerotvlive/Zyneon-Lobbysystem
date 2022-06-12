@@ -195,6 +195,12 @@ public class ItemManager {
 
     );
 
+    public static ItemStack PixelsJun22 = createGuiItem(
+            Material.LIGHT_BLUE_CONCRETE,
+            "§bSEASON 4 §8(Pixels Mai 2022-Juni 2022)"
+
+    );
+
     public static ItemStack Primal2_1 = createGuiItem(
             Material.LEATHER_HORSE_ARMOR,
             "§bFalkenwacht §8(Primal 2)"

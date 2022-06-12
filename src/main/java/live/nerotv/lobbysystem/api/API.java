@@ -126,12 +126,12 @@ public class API {
 
     public static boolean rotate = false;
     public static void checkRotating() {
-        if(!rotate) {
+        /*if(!rotate) {
             BroadcastManager.rotate(Bukkit.getScheduler(),Bukkit.getEntity(UUID.fromString("c3df452e-2621-4fcf-9b5d-58e1b8960b49")));
             BroadcastManager.rotate(Bukkit.getScheduler(),Bukkit.getEntity(UUID.fromString("8b275180-cfa6-41c6-9e0e-e58bdf30a540")));
             BroadcastManager.rotate(Bukkit.getScheduler(),Bukkit.getEntity(UUID.fromString("4cff53e1-48f7-4fb8-a6ea-61af2cc88c5c")));
             rotate = true;
-        }
+        }*/
     }
 
     public static void sendActionBar(Player player, String message) {

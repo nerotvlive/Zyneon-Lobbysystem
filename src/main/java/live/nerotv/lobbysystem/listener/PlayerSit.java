@@ -37,6 +37,7 @@ public class PlayerSit implements Listener {
         locs.add(new Location(p.getWorld(),-234,3,237));
         locs.add(new Location(p.getWorld(),-195,3,156));
         locs.add(new Location(p.getWorld(),-238,3,217));
+        locs.add(new Location(p.getWorld(),-200,3,158));
         if(locs.contains(loc)) {
             doFishEvent(p);
         }

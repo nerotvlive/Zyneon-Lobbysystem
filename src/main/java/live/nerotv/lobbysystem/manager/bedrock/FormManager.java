@@ -255,7 +255,7 @@ public class FormManager {
     public static void openPixelsMaps(Player p) {
         if(PlayerAPI.isBedrock(p)) {
             FloodgatePlayer player = FloodgateApi.getInstance().getPlayer(p.getUniqueId());
-            player.sendForm(SimpleForm.builder().title("§9PIXELS§8-§9Karten").button("§9PIXELS SEASON 1 §8(§8Jun. 21 - Aug. 21§8)").button("§9PIXELS SEASON 2 §8(§8Sep. 21 - Jan. 22§8)").button("§9PIXELS SEASON 3 §8(§8Feb. 22 - Apr. 22§8)").button("§8Zurück zur Lobby").button("§8Zurück").responseHandler((form,responseData) -> {
+            player.sendForm(SimpleForm.builder().title("§9PIXELS§8-§9Karten").button("§9PIXELS SEASON 1 §8(§8Jun. 21 - Aug. 21§8)").button("§9PIXELS SEASON 2 §8(§8Sep. 21 - Jan. 22§8)").button("§9PIXELS SEASON 3 §8(§8Feb. 22 - Apr. 22§8)").button("§9PIXELS SEASON 4 §8(§8Mai 22 - Jun. 22§8)").button("§8Zurück zur Lobby").button("§8Zurück").responseHandler((form,responseData) -> {
                 FormResponse response = form.parseResponse(responseData);
                 if(response.isCorrect()&&!response.isClosed()&&!response.isInvalid()||form.parseResponse(responseData).getClickedButton()!=null) {
                     ButtonComponent button = form.parseResponse(responseData).getClickedButton();
@@ -268,6 +268,9 @@ public class FormManager {
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                     } else if(Name.equals("§9PIXELS SEASON 3 §8(§8Feb. 22 - Apr. 22§8)")) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-apr22").getSpawnLocation());
+                        p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
+                    } else if(Name.equals("§9PIXELS SEASON 4 §8(§8Mai 22 - Jun. 22§8)")) {
+                        p.teleport(Bukkit.getServer().getWorld("pixels-jun22").getSpawnLocation());
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                     } else if(Name.equals("§8Zurück zur Lobby")) {
                         if (WarpAPI.isWarpEnabled("Lobby")) {

@@ -136,6 +136,9 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals(ItemManager.PixelsApr22.getItemMeta().getDisplayName())) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-apr22").getSpawnLocation());
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
+                    } else if(Name.equals(ItemManager.PixelsJun22.getItemMeta().getDisplayName())) {
+                        p.teleport(Bukkit.getServer().getWorld("pixels-jun22").getSpawnLocation());
+                        p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                     } else if(Name.equals(ItemManager.Lobby.getItemMeta().getDisplayName())) {
                         if (WarpAPI.isWarpEnabled("Lobby")) {
                             p.teleport(WarpAPI.getWarp("Lobby"));

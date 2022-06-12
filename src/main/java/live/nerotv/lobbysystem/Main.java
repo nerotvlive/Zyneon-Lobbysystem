@@ -77,6 +77,8 @@ public class Main {
         WorldAPI.setDifficulty("pixels-jan22",Difficulty.PEACEFUL);
         WorldAPI.loadWorld("pixels-apr22");
         WorldAPI.setDifficulty("pixels-apr22",Difficulty.PEACEFUL);
+        WorldAPI.loadWorld("pixels-jun22");
+        WorldAPI.setDifficulty("pixels-jun22",Difficulty.PEACEFUL);
         WorldAPI.loadWorld("pixels",org.bukkit.World.Environment.NORMAL,WorldType.FLAT,false,true);
         WorldAPI.setDifficulty("pixels",Difficulty.PEACEFUL);
         WorldAPI.loadWorld("Primal2");
