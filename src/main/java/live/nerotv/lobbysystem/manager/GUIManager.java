@@ -164,7 +164,7 @@ public class GUIManager {
                                 MapsInventory.setItem(11, ItemManager.PixelsApr22);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             } else if (time == 0) {
-                                MapsInventory.setItem(11, ItemManager.PixelsJun22);
+                                MapsInventory.setItem(12, ItemManager.PixelsJun22);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             }
                         }
