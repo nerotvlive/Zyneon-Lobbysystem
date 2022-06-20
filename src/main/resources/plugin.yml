@@ -1,7 +1,7 @@
 name: Lobbysystem
-version: 3.4.6 (E596)
+version: 3.5.0 (E597)
 website: https://nerotv.live/lobbysystem
-api-version: 1.18
+api-version: 1.19
 description: Lobbysystem by nerotvlive
 author: nerotvlive
 main: live.nerotv.Preloader
