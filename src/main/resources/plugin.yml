@@ -1,5 +1,5 @@
 name: Lobbysystem
-version: 3.5.0 (E597)
+version: '${project.version}'
 website: https://nerotv.live/lobbysystem
 api-version: 1.19
 description: Lobbysystem by nerotvlive
