@@ -231,6 +231,11 @@ public class ItemManager {
             "§bWolfshaven §8(Argria)"
     );
 
+    public static ItemStack Deadwood1 = createGuiItem(
+            Material.DEAD_BUSH,
+            "§bDeadwood §8(Deadwood)"
+    );
+
     public static ItemStack StopYes = createGuiItem(
             Material.GREEN_CONCRETE,
             "§aJa§2"

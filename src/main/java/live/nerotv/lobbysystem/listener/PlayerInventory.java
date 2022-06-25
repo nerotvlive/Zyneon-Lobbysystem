@@ -220,6 +220,13 @@ public class PlayerInventory implements Listener {
                         } else {
                             p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
                         }
+                    } else if(Name.equals(ItemManager.Deadwood1.getItemMeta().getDisplayName())) {
+                        if (WarpAPI.isWarpEnabled("Deadwood1")) {
+                            p.teleport(WarpAPI.getWarp("Deadwood1"));
+                            p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
+                        } else {
+                            p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
+                        }
                     } else if(Name.equals(ItemManager.Cancel.getItemMeta().getDisplayName())) {
                         p.closeInventory();
                         p.playSound(p.getLocation(),Sound.ENTITY_CHICKEN_EGG,100,100);

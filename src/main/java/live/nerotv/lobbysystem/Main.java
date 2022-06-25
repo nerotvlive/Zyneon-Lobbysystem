@@ -87,6 +87,9 @@ public class Main {
         WorldAPI.setDifficulty("Argria1",Difficulty.PEACEFUL);
         WorldAPI.loadWorld("Primal3");
         WorldAPI.setDifficulty("Primal3",Difficulty.PEACEFUL);
+        WorldAPI.loadWorld("Deadwood");
+        WorldAPI.setDifficulty("Deadwood",Difficulty.PEACEFUL);
+        Bukkit.getWorld("Deadwood").setAutoSave(false);
         Bukkit.getWorld("Primal3").setAutoSave(false);
         Bukkit.getWorld("Primal2").setAutoSave(false);
         Bukkit.getWorld("Argria1").setAutoSave(false);

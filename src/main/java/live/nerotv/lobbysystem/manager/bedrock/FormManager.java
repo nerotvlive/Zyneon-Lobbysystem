@@ -220,7 +220,7 @@ public class FormManager {
     public static void openProjectMaps(Player p) {
         if(PlayerAPI.isBedrock(p)) {
             FloodgatePlayer player = FloodgateApi.getInstance().getPlayer(p.getUniqueId());
-            player.sendForm(SimpleForm.builder().title("§9Projekt§8-§9Karten").button("§9Shervann §8(§8Primal 2§8)").button("§9Falkenwacht §8(§8Primal 2§8)").button("§9Falkenwacht Ruinen §8(§8Primal 3§8)").button("§9Falkenwacht §8(§8Primal 3§8)").button("§9Tiefenstein §8(§8Primal 3§8)").button("§9Wolfshaven §8(§8Argria§8)").button("§8Zurück zur Lobby").button("§8Zurück").responseHandler((form,responseData) -> {
+            player.sendForm(SimpleForm.builder().title("§9Projekt§8-§9Karten").button("§9Shervann §8(§8Primal 2§8)").button("§9Falkenwacht §8(§8Primal 2§8)").button("§9Falkenwacht Ruinen §8(§8Primal 3§8)").button("§9Falkenwacht §8(§8Primal 3§8)").button("§9Tiefenstein §8(§8Primal 3§8)").button("§9Wolfshaven §8(§8Argria§8)").button("§9Deadwood §8(§8Deadwood§8)").button("§8Zurück zur Lobby").button("§8Zurück").responseHandler((form,responseData) -> {
                 FormResponse response = form.parseResponse(responseData);
                 if(response.isCorrect()&&!response.isClosed()&&!response.isInvalid()||form.parseResponse(responseData).getClickedButton()!=null) {
                     ButtonComponent button = form.parseResponse(responseData).getClickedButton();
@@ -229,6 +229,8 @@ public class FormManager {
                         p.teleport(WarpAPI.getWarp("Primal2_1"));
                     } else if(Name.equals("§9Shervann §8(§8Primal 2§8)")) {
                         p.teleport(WarpAPI.getWarp("Primal2_2"));
+                    } else if(Name.equals("§9Deadwood §8(§8Deadwood§8)")) {
+                        API.sendErrorMessage(p,"§cDeadwood kann sich nicht über die Bedrock-Edition angeschaut werden§8.");
                     } else if(Name.equals("§9Wolfshaven §8(§8Argria§8)")) {
                         p.teleport(WarpAPI.getWarp("Argria1"));
                     } else if(Name.equals("§9Falkenwacht Ruinen §8(§8Primal 3§8)")) {

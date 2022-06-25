@@ -53,6 +53,14 @@ public class PlayerWorld implements Listener {
                 Fly.flyPlayers.add(p);
             }
             p.setFlying(true);
+        } else if(p.getWorld().getName().equals("Deadwood")) {
+            API.getPlayerTime(p);
+            API.getPlayerWeather(p);
+            p.setAllowFlight(true);
+            if(!Fly.flyPlayers.contains(p)) {
+                Fly.flyPlayers.add(p);
+            }
+            p.setFlying(true);
         } else if(p.getWorld().getName().equals("pixels")) {
             p.resetPlayerTime();
             p.resetPlayerWeather();

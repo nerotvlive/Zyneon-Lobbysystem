@@ -83,6 +83,11 @@ public class PlayerInteract implements Listener {
                         if (e.getItem() != null) {
                             e.setCancelled(true);
                         }
+                    } else if (p.getWorld().getName().equals("Deadwood")) {
+                        e.setCancelled(false);
+                        if (e.getItem() != null) {
+                            e.setCancelled(true);
+                        }
                     } else {
                         e.setCancelled(true);
                         if (e.getItem() != null) {
