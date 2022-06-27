@@ -46,7 +46,11 @@ public class PlayerJoin implements Listener {
         if(Main.PM.getPlugin("floodgate")!=null) {
             BedrockAPI.initBedrockPlayer(p);
         }
-        e.setJoinMessage("§8» §a"+p.getName());
+        for(Player all:Bukkit.getOnlinePlayers()) {
+            if(all.getUniqueId()!=p.getUniqueId()) {
+                all.sendMessage("§8» §a"+p.getName());
+            }
+        }
         p.setInvulnerable(true);
         API.setTablist();
         API.getPlayerTime(p);
