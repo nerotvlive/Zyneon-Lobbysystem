@@ -22,6 +22,7 @@ public class PlayerJoin implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
+        e.setJoinMessage(null);
         Nametags.noRenew.remove(p);
         p.setOp(false);
         API.checkRotating();
