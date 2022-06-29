@@ -220,28 +220,22 @@ public class GUIManager {
         if(PlayerAPI.isBedrock(p)) {
             FormManager.openProfile(p);
         } else {
-            Inventory profileOptionsInventory = Bukkit.createInventory(null, InventoryType.HOPPER, "§bProfil§8,§b Optionen§8 & §bExtras");
+            Inventory profileOptionsInventory = Bukkit.createInventory(null, InventoryType.HOPPER, "§bProfil§8 und §bOptionen§8");
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
             fillInventory(profileOptionsInventory);
             p.openInventory(profileOptionsInventory);
             if (!PlayerAPI.hasAnimations(p)) {
-                profileOptionsInventory.setItem(2, ItemManager.Profile(p));
-                profileOptionsInventory.setItem(1, ItemManager.Extras);
+                profileOptionsInventory.setItem(1, ItemManager.Profile(p));
                 profileOptionsInventory.setItem(3, ItemManager.Settings);
             } else {
-                new Countdown(2, Main.get()) {
+                new Countdown(1, Main.get()) {
                     @Override
                     public void count(int time) {
-
-                        if (time == 1) {
-                            profileOptionsInventory.setItem(2, ItemManager.Profile(p));
-                            p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
-                        } else if (time == 0) {
-                            profileOptionsInventory.setItem(1, ItemManager.Extras);
+                        if (time == 0) {
+                            profileOptionsInventory.setItem(1, ItemManager.Profile(p));
                             profileOptionsInventory.setItem(3, ItemManager.Settings);
                             p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                         }
-
                     }
                 }.startTicks();
             }
@@ -258,12 +252,16 @@ public class GUIManager {
             p.openInventory(extrasInventory);
             if (!PlayerAPI.hasAnimations(p)) {
                 extrasInventory.setItem(1, ItemManager.Minigames);
+                extrasInventory.setItem(2, ItemManager.Extras);
                 extrasInventory.setItem(3, ItemManager.Music);
             } else {
-                new Countdown(1, Main.get()) {
+                new Countdown(2, Main.get()) {
                     @Override
                     public void count(int time) {
-                        if (time == 0) {
+                        if(time == 1) {
+                            extrasInventory.setItem(2, ItemManager.Extras);
+                            p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
+                        } else if (time == 0) {
                             extrasInventory.setItem(1, ItemManager.Minigames);
                             extrasInventory.setItem(3, ItemManager.Music);
                             p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);

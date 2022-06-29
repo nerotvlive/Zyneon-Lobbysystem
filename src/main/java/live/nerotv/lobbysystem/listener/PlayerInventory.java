@@ -82,7 +82,7 @@ public class PlayerInventory implements Listener {
                     } else if (Name.equals("§bFreunde- und Partysystem")) {
                         p.performCommand("friendsgui");
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
-                    } else if (Name.equals("§bProfil§8,§b Optionen §8& §bExtras")) {
+                    } else if (Name.equals("§bProfil§8 und §bOptionen§8")) {
                         GUIManager.openProfileOptionsInventory(p);
                     } else if(Name.equals(ItemManager.CompassItem05.getItemMeta().getDisplayName())) {
                         API.doCompassWarp(p,5);

@@ -1,9 +1,10 @@
 package live.nerotv.lobbysystem.manager;
 
-import com.destroystokyo.paper.profile.PlayerProfile;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
-import live.nerotv.lobbysystem.api.*;
+import live.nerotv.lobbysystem.api.ConfigAPI;
+import live.nerotv.lobbysystem.api.PlayerAPI;
+import live.nerotv.lobbysystem.api.WorldAPI;
 import live.nerotv.lobbysystem.commands.Fly;
 import live.nerotv.lobbysystem.cosmetics.CosItemManager;
 import org.bukkit.Difficulty;
@@ -15,10 +16,9 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
+
 import java.io.File;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -283,7 +283,7 @@ public class ItemManager {
         ItemStack Return = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta ProfileMeta = (SkullMeta) Return.getItemMeta();
         ProfileMeta.setOwningPlayer(p);
-        ProfileMeta.setDisplayName("§bProfil§8,§b Optionen §8& §bExtras");
+        ProfileMeta.setDisplayName("§bProfil§8 und §bOptionen§8");
         Return.setItemMeta(ProfileMeta);
         return Return;
     }
