@@ -283,7 +283,7 @@ public class ItemManager {
         ItemStack Return = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta ProfileMeta = (SkullMeta) Return.getItemMeta();
         ProfileMeta.setOwningPlayer(p);
-        ProfileMeta.setDisplayName("§bProfil§8 und §bOptionen§8");
+        ProfileMeta.setDisplayName("§bProfil und Optionen§8");
         Return.setItemMeta(ProfileMeta);
         return Return;
     }

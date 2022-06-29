@@ -220,7 +220,7 @@ public class GUIManager {
         if(PlayerAPI.isBedrock(p)) {
             FormManager.openProfile(p);
         } else {
-            Inventory profileOptionsInventory = Bukkit.createInventory(null, InventoryType.HOPPER, "§bProfil§8 und §bOptionen§8");
+            Inventory profileOptionsInventory = Bukkit.createInventory(null, InventoryType.HOPPER, "§bProfil und Optionen§8");
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
             fillInventory(profileOptionsInventory);
             p.openInventory(profileOptionsInventory);
