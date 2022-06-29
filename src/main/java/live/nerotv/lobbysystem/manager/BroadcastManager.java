@@ -58,6 +58,8 @@ public class BroadcastManager {
                     } else {
                         p.sendActionBar("§dJumper§8-§dStreak§8: §f" + j.getStreak() + "§7 §8(§7Highscore§8:§7 " + j.getStreak() + "§8)");
                     }
+                } else {
+                    p.sendActionBar("§fLust zu spingen§8? §fMache §d/jumper§8!");
                 }
             }
             sendActionbar(scheduler);

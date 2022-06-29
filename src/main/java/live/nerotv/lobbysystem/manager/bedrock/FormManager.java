@@ -227,18 +227,24 @@ public class FormManager {
                     String Name = button.getText();
                     if(Name.equals("§9Falkenwacht §8(§8Primal 2§8)")) {
                         p.teleport(WarpAPI.getWarp("Primal2_1"));
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§9Shervann §8(§8Primal 2§8)")) {
                         p.teleport(WarpAPI.getWarp("Primal2_2"));
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§9Deadwood §8(§8Deadwood§8)")) {
                         API.sendErrorMessage(p,"§cDeadwood kann sich nicht über die Bedrock-Edition angeschaut werden§8.");
                     } else if(Name.equals("§9Wolfshaven §8(§8Argria§8)")) {
                         p.teleport(WarpAPI.getWarp("Argria1"));
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§9Falkenwacht Ruinen §8(§8Primal 3§8)")) {
                         p.teleport(WarpAPI.getWarp("Primal3_3"));
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§9Falkenwacht §8(§8Primal 3§8)")) {
                         p.teleport(WarpAPI.getWarp("Primal3_2"));
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§9Tiefenstein §8(§8Primal 3§8)")) {
                         p.teleport(WarpAPI.getWarp("Primal3_1"));
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§8Zurück zur Lobby")) {
                         if (WarpAPI.isWarpEnabled("Lobby")) {
                             p.teleport(WarpAPI.getWarp("Lobby"));
@@ -265,15 +271,19 @@ public class FormManager {
                     if(Name.equals("§9PIXELS SEASON 1 §8(§8Jun. 21 - Aug. 21§8)")) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-aug21").getSpawnLocation());
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§9PIXELS SEASON 2 §8(§8Sep. 21 - Jan. 22§8)")) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-jan22").getSpawnLocation());
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§9PIXELS SEASON 3 §8(§8Feb. 22 - Apr. 22§8)")) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-apr22").getSpawnLocation());
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§9PIXELS SEASON 4 §8(§8Mai 22 - Jun. 22§8)")) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-jun22").getSpawnLocation());
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                     } else if(Name.equals("§8Zurück zur Lobby")) {
                         if (WarpAPI.isWarpEnabled("Lobby")) {
                             p.teleport(WarpAPI.getWarp("Lobby"));

@@ -1,6 +1,7 @@
 package live.nerotv.lobbysystem.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,6 +15,7 @@ public class Pixels implements CommandExecutor {
             if(s instanceof Player) {
                 Player p = (Player)s;
                 p.teleport(Bukkit.getServer().getWorld("pixels").getSpawnLocation());
+                p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
             } else {
                 s.sendMessage("§cDazu §4musst§c du ein Spieler sein§4!");
             }

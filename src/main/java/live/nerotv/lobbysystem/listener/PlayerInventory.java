@@ -95,6 +95,7 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals(ItemManager.Primal2_1.getItemMeta().getDisplayName())) {
                         if (WarpAPI.isWarpEnabled("Primal2_1")) {
                             p.teleport(WarpAPI.getWarp("Primal2_1"));
+                            p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                         } else {
                             p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
@@ -102,6 +103,7 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals(ItemManager.Primal3_1.getItemMeta().getDisplayName())) {
                         if (WarpAPI.isWarpEnabled("Primal3_1")) {
                             p.teleport(WarpAPI.getWarp("Primal3_1"));
+                            p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                         } else {
                             p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
@@ -109,6 +111,7 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals(ItemManager.Primal3_2.getItemMeta().getDisplayName())) {
                         if (WarpAPI.isWarpEnabled("Primal3_2")) {
                             p.teleport(WarpAPI.getWarp("Primal3_2"));
+                            p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                         } else {
                             p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
@@ -116,6 +119,7 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals(ItemManager.Primal3_3.getItemMeta().getDisplayName())) {
                         if (WarpAPI.isWarpEnabled("Primal3_3")) {
                             p.teleport(WarpAPI.getWarp("Primal3_3"));
+                            p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                         } else {
                             p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
@@ -123,21 +127,26 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals(ItemManager.Primal2_2.getItemMeta().getDisplayName())) {
                         if(WarpAPI.isWarpEnabled("Primal2_2")) {
                             p.teleport(WarpAPI.getWarp("Primal2_2"));
+                            p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                         } else {
                             p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
                         }
                     } else if(Name.equals(ItemManager.PixelsAug21.getItemMeta().getDisplayName())) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-aug21").getSpawnLocation());
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                     } else if(Name.equals(ItemManager.PixelsJan22.getItemMeta().getDisplayName())) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-jan22").getSpawnLocation());
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                     } else if(Name.equals(ItemManager.PixelsApr22.getItemMeta().getDisplayName())) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-apr22").getSpawnLocation());
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                     } else if(Name.equals(ItemManager.PixelsJun22.getItemMeta().getDisplayName())) {
                         p.teleport(Bukkit.getServer().getWorld("pixels-jun22").getSpawnLocation());
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                         p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                     } else if(Name.equals(ItemManager.Lobby.getItemMeta().getDisplayName())) {
                         if (WarpAPI.isWarpEnabled("Lobby")) {
@@ -217,6 +226,7 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals(ItemManager.Argria1.getItemMeta().getDisplayName())) {
                         if (WarpAPI.isWarpEnabled("Argria1")) {
                             p.teleport(WarpAPI.getWarp("Argria1"));
+                            p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                         } else {
                             p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
@@ -224,6 +234,7 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals(ItemManager.Deadwood1.getItemMeta().getDisplayName())) {
                         if (WarpAPI.isWarpEnabled("Deadwood1")) {
                             p.teleport(WarpAPI.getWarp("Deadwood1"));
+                            p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                         } else {
                             p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
@@ -297,6 +308,7 @@ public class PlayerInventory implements Listener {
                         }
                     } else if(Name.equals(ItemManager.BackTL.getItemMeta().getDisplayName())) {
                         p.teleport(WarpAPI.getWarp("Spawn"));
+                        p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                         p.playSound(p.getLocation(),Sound.ENTITY_CHICKEN_EGG,100,100);
                     } else if(Name.equals("§bNavigator")) {
                         GUIManager.openCompassInventory(p);

@@ -7,6 +7,7 @@ import live.nerotv.lobbysystem.commands.Fly;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -87,6 +88,7 @@ public class Jumper {
             highscore = JumperAPI.getHighscore(this.player.getUniqueId());
         }
         player.teleport(new Location(currentLocation.getWorld(),currentLocation.getBlockX()+0.5,currentLocation.getBlockY()+1,currentLocation.getBlockZ()+0.5));
+        player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
         this.isActive = true;
         JumperAPI.Jumpers.put(player,this);
     }
