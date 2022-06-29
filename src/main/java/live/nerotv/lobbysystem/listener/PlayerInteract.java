@@ -2,15 +2,12 @@ package live.nerotv.lobbysystem.listener;
 
 import live.nerotv.lobbysystem.api.API;
 import live.nerotv.lobbysystem.api.ConfigAPI;
-import live.nerotv.lobbysystem.jumper.JumperAPI;
 import live.nerotv.lobbysystem.manager.BroadcastManager;
 import live.nerotv.lobbysystem.manager.GUIManager;
 import live.nerotv.lobbysystem.manager.ItemManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
-import org.bukkit.block.Sign;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -111,7 +108,7 @@ public class PlayerInteract implements Listener {
                                 } else if (Name.equals("§bMinigames")) {
                                     p.performCommand(ConfigAPI.CFG.getString("Core.Minigames.Command"));
                                     p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
-                                } else if (Name.equals("§bProfil§8,§b Optionen §8& §bExtras")) {
+                                } else if (Name.toLowerCase().contains("und optionen")) {
                                     GUIManager.openProfileOptionsInventory(p);
                                 } else if (Name.equals(ItemManager.Settings.getItemMeta().getDisplayName())) {
                                     p.performCommand("settings");
