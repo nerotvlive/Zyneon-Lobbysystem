@@ -550,6 +550,7 @@ public class API {
         } else {
             if(WarpAPI.isWarpEnabled("GUI_0"+warp)) {
                 player.teleport(WarpAPI.getWarp("GUI_0"+warp));
+                player.playSound(player.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                 player.playSound(player.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
             } else {
                 player.playSound(player.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
