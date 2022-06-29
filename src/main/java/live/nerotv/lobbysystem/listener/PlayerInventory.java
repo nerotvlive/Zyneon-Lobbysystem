@@ -142,6 +142,7 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals(ItemManager.Lobby.getItemMeta().getDisplayName())) {
                         if (WarpAPI.isWarpEnabled("Lobby")) {
                             p.teleport(WarpAPI.getWarp("Lobby"));
+                            p.playSound(p.getLocation(), Sound.ENTITY_ENDERMAN_TELEPORT, 100, 100);
                             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
                         } else {
                             p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);

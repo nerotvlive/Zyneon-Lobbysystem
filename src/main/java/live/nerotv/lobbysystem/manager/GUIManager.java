@@ -50,22 +50,22 @@ public class GUIManager {
                                 CompassInventory.setItem(0, ItemManager.CompassItem01);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             } else if(time == 5) {
-                                CompassInventory.setItem(0, ItemManager.CompassItem02);
+                                CompassInventory.setItem(1, ItemManager.CompassItem02);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             } else if(time == 4) {
-                                CompassInventory.setItem(0, ItemManager.CompassItem03);
+                                CompassInventory.setItem(2, ItemManager.CompassItem03);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             } else if(time == 3) {
-                                CompassInventory.setItem(0, ItemManager.CompassItem04);
+                                CompassInventory.setItem(3, ItemManager.CompassItem04);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             } else if(time == 2) {
-                                CompassInventory.setItem(0, ItemManager.CompassItem05);
+                                CompassInventory.setItem(4, ItemManager.CompassItem05);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             } else if(time == 1) {
-                                CompassInventory.setItem(0, ItemManager.CompassItem06);
+                                CompassInventory.setItem(5, ItemManager.CompassItem06);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             } else if(time == 0) {
-                                CompassInventory.setItem(0, ItemManager.CompassItem07);
+                                CompassInventory.setItem(6, ItemManager.CompassItem07);
                                 p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                             }
                         }
