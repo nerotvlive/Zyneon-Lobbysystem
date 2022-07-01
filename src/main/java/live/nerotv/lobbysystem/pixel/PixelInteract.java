@@ -1,10 +1,9 @@
 package live.nerotv.lobbysystem.pixel;
 
 import live.nerotv.lobbysystem.api.API;
-import live.nerotv.lobbysystem.api.NewSound;
-import live.nerotv.lobbysystem.api.PlayerAPI;
 import live.nerotv.lobbysystem.manager.ItemManager;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -36,7 +35,7 @@ public class PixelInteract implements Listener {
                                             API.beleidigeUser(p);
                                         } else {
                                             e.getClickedBlock().setType(placedBlock);
-                                            PlayerAPI.playNewSound(p, NewSound.ENTITY_CHICKEN_EGG);
+                                            p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG,100,100);
                                         }
                                     }
                                 } else if(e.getClickedBlock().getY()>2) {

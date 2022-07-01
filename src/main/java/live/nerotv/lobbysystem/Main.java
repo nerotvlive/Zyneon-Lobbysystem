@@ -58,7 +58,6 @@ public class Main {
         API.sendConsoleMessage("SpigotChannel werden registriert und der Empfänger wird geladen...");
         CosGUIManager.initSkullInventory();
         getServer().getMessenger().registerIncomingPluginChannel(instance,"base:bungee",new Receiver());
-        getServer().getMessenger().registerIncomingPluginChannel(instance, "labymod3:main",new Receiver());
         getServer().getMessenger().registerOutgoingPluginChannel(instance,"base:spigot");
         getServer().getMessenger().registerOutgoingPluginChannel(instance, "BungeeCord");
         Glow.registerGlow();

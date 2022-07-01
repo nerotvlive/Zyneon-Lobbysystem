@@ -14,8 +14,8 @@ import org.geysermc.cumulus.component.ButtonComponent;
 import org.geysermc.cumulus.response.FormResponse;
 import org.geysermc.floodgate.api.FloodgateApi;
 import org.geysermc.floodgate.api.player.FloodgatePlayer;
+
 import java.io.File;
-import static live.nerotv.lobbysystem.api.NewSound.ENTITY_CHICKEN_EGG;
 
 public class FormManager {
 
@@ -50,7 +50,7 @@ public class FormManager {
                     }
                 }
             }).build());
-            PlayerAPI.playNewSound(p,ENTITY_CHICKEN_EGG);
+            p.playSound(p.getLocation(),Sound.ENTITY_CHICKEN_EGG,100,100);
         } else {
             GUIManager.openCompassInventory(p);
         }

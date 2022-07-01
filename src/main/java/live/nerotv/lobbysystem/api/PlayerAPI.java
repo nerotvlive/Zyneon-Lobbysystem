@@ -1,17 +1,14 @@
 package live.nerotv.lobbysystem.api;
 
-import com.zyneonstudios.api.paper.Zyneon;
-import com.zyneonstudios.api.paper.utils.user.User;
 import live.nerotv.lobbysystem.Main;
 import live.nerotv.lobbysystem.commands.Nametags;
 import live.nerotv.lobbysystem.jumper.Jumper;
 import live.nerotv.lobbysystem.jumper.JumperAPI;
-import live.nerotv.lobbysystem.utils.MessageResolver;
 import org.bukkit.Bukkit;
-import org.bukkit.Sound;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.*;
+
 import java.io.File;
 
 public class PlayerAPI {
@@ -63,42 +60,12 @@ public class PlayerAPI {
         }
     }
 
-    public static void sendPlayerMessage(Player player,String message) {
-        User u = Zyneon.getAPI().getOnlineUser(player.getUniqueId());
-        u.sendMessage(message.replace("&","§"));
-    }
-
-    public static void sendPlayerMessage(Player player, String message, NewSound newSound) {
-        player.playSound(player.getLocation(),org.bukkit.Sound.valueOf(newSound.toString()),100,100);
-        User u = Zyneon.getAPI().getOnlineUser(player.getUniqueId());
-        u.sendRawMessage(message.replace("&","§"));
-    }
-
-    public static void playNewSound(Player player,NewSound newSound) {
-        org.bukkit.Sound sound = Sound.valueOf(newSound.toString());
-        player.playSound(player.getLocation(),sound,100,100);
-    }
-
-    public static void playNewSound(Player player,NewSound newSound, float v) {
-        org.bukkit.Sound sound = Sound.valueOf(newSound.toString());
-        player.playSound(player.getLocation(),sound,v,100);
-    }
-
-    public static void playNewSound(Player player,NewSound newSound, float v, float v1) {
-        org.bukkit.Sound sound = Sound.valueOf(newSound.toString());
-        player.playSound(player.getLocation(),sound,v,v1);
-    }
-
     public static boolean isBedrock(Player player) {
         if(Main.PM.getPlugin("floodgate")!=null) {
             return BedrockAPI.isBedrock(player);
         } else {
             return false;
         }
-    }
-
-    public static MessageResolver.Language getLanguage(Player player) {
-        return MessageResolver.Language.GERMAN;
     }
 
     public static String rankName(Player player) {

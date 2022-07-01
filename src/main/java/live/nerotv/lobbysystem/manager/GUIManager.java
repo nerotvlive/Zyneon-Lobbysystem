@@ -1,7 +1,6 @@
 package live.nerotv.lobbysystem.manager;
 
 import live.nerotv.lobbysystem.Main;
-import live.nerotv.lobbysystem.api.NewSound;
 import live.nerotv.lobbysystem.api.PlayerAPI;
 import live.nerotv.lobbysystem.manager.bedrock.FormManager;
 import live.nerotv.lobbysystem.utils.Countdown;
@@ -311,7 +310,7 @@ public class GUIManager {
             backToLobbyInventory.setItem(3, ItemManager.Placeholder);
             backToLobbyInventory.setItem(4, ItemManager.Placeholder);
             p.openInventory(backToLobbyInventory);
-            PlayerAPI.playNewSound(p, NewSound.ENTITY_CHICKEN_EGG);
+            p.playSound(p.getLocation(),Sound.ENTITY_CHICKEN_EGG,100,100);
         }
     }
 }

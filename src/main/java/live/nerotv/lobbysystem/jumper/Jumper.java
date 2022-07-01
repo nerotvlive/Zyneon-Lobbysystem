@@ -1,7 +1,6 @@
 package live.nerotv.lobbysystem.jumper;
 
 import live.nerotv.lobbysystem.api.API;
-import live.nerotv.lobbysystem.api.NewSound;
 import live.nerotv.lobbysystem.api.PlayerAPI;
 import live.nerotv.lobbysystem.commands.Fly;
 import org.bukkit.Bukkit;
@@ -135,7 +134,7 @@ public class Jumper {
         if(this.streak > this.highscore) {
             this.highscore = this.streak;
             JumperAPI.setHighscore(this.player.getUniqueId(),highscore);
-            API.sendMessage(this.player,"§7Du hast deinen §dJumper§8-§dHighscore §7gebrochen§8! §7Dein neuer Highscore ist §e"+highscore+"§8!",NewSound.ENTITY_CHICKEN_EGG);
+            API.sendMessage(this.player,"§7Du hast deinen §dJumper§8-§dHighscore §7gebrochen§8! §7Dein neuer Highscore ist §e"+highscore+"§8!");
         }
         this.currentLocation.getBlock().setType(Material.AIR);
         this.nextLocation.getBlock().setType(Material.AIR);

@@ -1,5 +1,8 @@
 package live.nerotv.lobbysystem.commands;
 
+import com.zyneonstudios.api.paper.Zyneon;
+import com.zyneonstudios.api.paper.utils.user.User;
+import com.zyneonstudios.api.utils.Strings;
 import live.nerotv.lobbysystem.api.API;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
@@ -13,7 +16,7 @@ public class Broadcast implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender s, Command cmd, String label, String[] args) {
         if(cmd.getName().equalsIgnoreCase("Broadcast")) {
-            if(!(s instanceof Player)) {
+            if(!(s instanceof Player p)) {
                 if(args.length == 0) {
                     s.sendMessage("§4Fehler: §c/broadcast [Nachricht]");
                 } else {
@@ -28,7 +31,7 @@ public class Broadcast implements CommandExecutor {
                     Bukkit.getConsoleSender().sendMessage("§cWichtig §8| §f"+m.replace("&","§"));
                 }
             } else {
-                Player p = (Player)s;
+                User u = Zyneon.getAPI().getOnlineUser(p.getUniqueId());
                 if(p.hasPermission("zyneon.team")) {
                     if(args.length == 0) {
                         p.sendMessage("§4Fehler: §c/broadcast [Nachricht]");
@@ -45,7 +48,7 @@ public class Broadcast implements CommandExecutor {
                         Bukkit.getConsoleSender().sendMessage("§cWichtig §8| §f"+m.replace("&","§"));
                     }
                 } else {
-                    API.sendErrorMessage(p,API.noPerms);
+                    u.sendErrorMessage(Strings.noPerms());
                 }
             }
         }

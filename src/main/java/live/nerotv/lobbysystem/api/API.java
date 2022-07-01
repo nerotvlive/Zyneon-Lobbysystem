@@ -1,11 +1,12 @@
 package live.nerotv.lobbysystem.api;
 
 import com.zyneonstudios.api.paper.Zyneon;
+import com.zyneonstudios.api.paper.utils.user.User;
+import com.zyneonstudios.api.utils.Strings;
 import live.nerotv.lobbysystem.Main;
 import live.nerotv.lobbysystem.commands.Fly;
 import live.nerotv.lobbysystem.manager.ItemManager;
 import live.nerotv.lobbysystem.pixel.PixelAPI;
-import live.nerotv.lobbysystem.utils.MessageResolver;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.*;
@@ -24,10 +25,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class API {
 
-    public static String noPerms = "§cDas darst du nicht!";
-    public static String noPlayer = "§cDieser Spieler wurde nicht gefunden!";
-    public static String Prefix = "§dZyneon §8» §7";
     public static PluginManager PM = Bukkit.getPluginManager();
+    public static String noPerms = Strings.noPerms();
+    public static String noPlayer = Strings.playerNotFound();
 
     public static ArrayList<String> SubtitleLD = new ArrayList<String>();
     public static ArrayList<String> SubtitleAD = new ArrayList<String>();
@@ -138,7 +138,7 @@ public class API {
     }
 
     public static void initCommand(CommandExecutor command,String commandName,Boolean tab) {
-        sendMessage(MessageResolver.getMessage(MessageResolver.Message.init_COMMAND,getConsoleLanguage()).replace("%command%",commandName));
+        Bukkit.getConsoleSender().sendMessage("§f  -> §7Lade Kommandoklasse §e"+commandName);
         Main.instance.getCommand(commandName).setExecutor(command);
         if(tab) {
             Main.instance.getCommand(commandName).setTabCompleter((TabCompleter) command);
@@ -146,56 +146,7 @@ public class API {
     }
 
     public static void initListener(Listener listener, String listenerName) {
-        sendMessage(MessageResolver.getMessage(MessageResolver.Message.init_LISTENER,getConsoleLanguage()).replace("%listener%",listenerName));
-        PM.registerEvents(listener,Main.instance);
-    }
-
-    public static void sendMessage(String message) {
-        Bukkit.getConsoleSender().sendMessage(Prefix+message.replace("&", "§"));
-    }
-
-    public static void sendMessage(CommandSender sender,String message) {
-        if(sender instanceof Player) {
-            PlayerAPI.sendPlayerMessage((Player)sender,Prefix+message.replace("&","§"));
-        } else {
-            sendMessage(message);
-        }
-    }
-
-    public static void sendMessage(CommandSender sender,String message,NewSound newSound) {
-        if(sender instanceof Player) {
-            PlayerAPI.sendPlayerMessage((Player)sender,Prefix+message.replace("&","§"),newSound);
-        } else {
-            sendMessage(message);
-        }
-    }
-
-    public static MessageResolver.Language getConsoleLanguage() {
-        return MessageResolver.Language.GERMAN;
-    }
-
-    public static void sendMessage(CommandSender sender,String message,Boolean poprefix) {
-        if(sender instanceof Player) {
-            if(poprefix) {
-                PlayerAPI.sendPlayerMessage((Player) sender,Prefix+message.replace("&", "§"),NewSound.ENTITY_CHICKEN_EGG);
-            } else {
-                PlayerAPI.sendPlayerMessage((Player) sender,message.replace("&", "§"));
-            }
-        } else {
-            sendMessage(message);
-        }
-    }
-
-    public static void sendErrorMessage(String message) {
-        Bukkit.getConsoleSender().sendMessage(message.replace("&", "§"));
-    }
-
-    public static void sendErrorMessage(CommandSender sender,String message) {
-        if(sender instanceof Player) {
-            PlayerAPI.sendPlayerMessage((Player) sender,message.replace("&", "§"),NewSound.BLOCK_ANVIL_BREAK);
-        } else {
-            sendErrorMessage(message);
-        }
+        Zyneon.getAPI().initListenerClass(PM,listener,Main.get());
     }
 
     public static String getGameMode(Player p) {
@@ -328,42 +279,42 @@ public class API {
         if (GameMode.equalsIgnoreCase("0")) {
             p.setGameMode(org.bukkit.GameMode.SURVIVAL);
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100.0f, 100.0f);
-            p.sendMessage(Prefix + "Du bist nun im " + getGamemode(p) + "§7!");
+            p.sendMessage("Du bist nun im " + getGamemode(p) + "§7!");
         }
         else if (GameMode.equalsIgnoreCase("1")) {
             p.setGameMode(org.bukkit.GameMode.CREATIVE);
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100.0f, 100.0f);
-            p.sendMessage(Prefix + "Du bist nun im " + getGamemode(p) + "§7!");
+            p.sendMessage("Du bist nun im " + getGamemode(p) + "§7!");
         }
         else if (GameMode.equalsIgnoreCase("2")) {
             p.setGameMode(org.bukkit.GameMode.ADVENTURE);
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100.0f, 100.0f);
-            p.sendMessage(Prefix + "Du bist nun im " + getGamemode(p) + "§7!");
+            p.sendMessage("Du bist nun im " + getGamemode(p) + "§7!");
         }
         else if (GameMode.equalsIgnoreCase("3")) {
             p.setGameMode(org.bukkit.GameMode.SPECTATOR);
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100.0f, 100.0f);
-            p.sendMessage(Prefix+ "Du bist nun im " + getGamemode(p) + "§7!");
+            p.sendMessage("Du bist nun im " + getGamemode(p) + "§7!");
         }
         else if (GameMode.equalsIgnoreCase("SURVIVAL")) {
             p.setGameMode(org.bukkit.GameMode.SURVIVAL);
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100.0f, 100.0f);
-            p.sendMessage(Prefix + "Du bist nun im " + getGamemode(p) + "§7!");
+            p.sendMessage("Du bist nun im " + getGamemode(p) + "§7!");
         }
         else if (GameMode.equalsIgnoreCase("CREATIVE")) {
             p.setGameMode(org.bukkit.GameMode.CREATIVE);
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100.0f, 100.0f);
-            p.sendMessage(Prefix + "Du bist nun im " + getGamemode(p) + "§7!");
+            p.sendMessage("Du bist nun im " + getGamemode(p) + "§7!");
         }
         else if (GameMode.equalsIgnoreCase("ADVENTURE")) {
             p.setGameMode(org.bukkit.GameMode.ADVENTURE);
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100.0f, 100.0f);
-            p.sendMessage(Prefix + "Du bist nun im " + getGamemode(p) + "§7!");
+            p.sendMessage("Du bist nun im " + getGamemode(p) + "§7!");
         }
         else if (GameMode.equalsIgnoreCase("SPECTATOR")) {
             p.setGameMode(org.bukkit.GameMode.SPECTATOR);
             p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100.0f, 100.0f);
-            p.sendMessage(Prefix + "Du bist nun im " + getGamemode(p) + "§7!");
+            p.sendMessage("Du bist nun im " + getGamemode(p) + "§7!");
         }
     }
 
@@ -450,7 +401,7 @@ public class API {
     }
 
     public static void sendConsoleMessage(String message) {
-        Bukkit.getConsoleSender().sendMessage(Prefix+message.replace("&","§"));
+        Bukkit.getConsoleSender().sendMessage(Strings.prefix()+message.replace("&","§"));
     }
 
     public static void getPlayerTime(Player player) {
@@ -501,12 +452,40 @@ public class API {
     }
 
     public static void beleidigeUser(Player player) {
-        PlayerAPI.sendPlayerMessage(player,UserBeleidigungen.get(ThreadLocalRandom.current().nextInt(0,UserBeleidigungen.size())),NewSound.BLOCK_ANVIL_BREAK);
+        User u = Zyneon.getAPI().getOnlineUser(player.getUniqueId());
+        u.sendErrorMessage(UserBeleidigungen.get(ThreadLocalRandom.current().nextInt(0,UserBeleidigungen.size())));
     }
 
     public static void clearPlayerChat(Player p) {
         for(int i= 0; i < 150; i++){
             p.sendMessage("§0");
+        }
+    }
+
+    public static void sendMessage(CommandSender s, String message) {
+        if(s instanceof Player p) {
+            User u = Zyneon.getAPI().getOnlineUser(p.getUniqueId());
+            u.sendMessage(message);
+        } else {
+            Zyneon.getZyneonServer().sendMessage(message);
+        }
+    }
+
+    public static void sendWarnMessage(CommandSender s, String message) {
+        if(s instanceof Player p) {
+            User u = Zyneon.getAPI().getOnlineUser(p.getUniqueId());
+            u.sendWarnMessage(message);
+        } else {
+            Zyneon.getZyneonServer().sendWarnMessage(message);
+        }
+    }
+
+    public static void sendErrorMessage(CommandSender s, String message) {
+        if(s instanceof Player p) {
+            User u = Zyneon.getAPI().getOnlineUser(p.getUniqueId());
+            u.sendErrorMessage(message);
+        } else {
+            Zyneon.getZyneonServer().sendErrorMessage(message);
         }
     }
 

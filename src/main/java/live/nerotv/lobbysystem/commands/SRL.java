@@ -1,9 +1,8 @@
 package live.nerotv.lobbysystem.commands;
 
 import com.zyneonstudios.api.paper.Zyneon;
-import live.nerotv.lobbysystem.api.API;
-import live.nerotv.lobbysystem.api.PlayerAPI;
-import live.nerotv.lobbysystem.utils.MessageResolver;
+import com.zyneonstudios.api.paper.utils.user.User;
+import com.zyneonstudios.api.utils.Strings;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -13,26 +12,20 @@ public class SRL implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender s, Command cmd, String label, String[] args) {
-        if(cmd.getName().equalsIgnoreCase("SRL")) {
-            if(s.hasPermission("zyneon.leading")) {
-                MessageResolver.Language language;
-                if(s instanceof Player) {
-                    language = PlayerAPI.getLanguage((Player)s);
-                } else {
-                    language = API.getConsoleLanguage();
-                }
-                if(!Zyneon.getZyneonServer().isStopping()) {
-                    Zyneon.getZyneonServer().stopServer();
-                    API.sendMessage(s, MessageResolver.getMessage(MessageResolver.Message.restart_START,language), true);
-                } else {
-                    API.sendErrorMessage(s, MessageResolver.getMessage(MessageResolver.Message.restart_ERROR,language));
-                }
+        if (s.hasPermission("zyneon.leading")) {
+            if (s instanceof Player p) {
+                User u = Zyneon.getAPI().getOnlineUser(p.getUniqueId());
+                u.sendMessage("§7Du hast den §aStopvorgang §7gestartet§8...");
             } else {
-                if(s instanceof Player) {
-                    API.sendErrorMessage(s,MessageResolver.getMessage(MessageResolver.Message.NoPerms, PlayerAPI.getLanguage((Player)s)));
-                } else {
-                    API.sendErrorMessage(s,MessageResolver.getMessage(MessageResolver.Message.NoPerms, API.getConsoleLanguage()));
-                }
+                s.sendMessage(Strings.prefix() + "§7Du hast den §aStopvorgang §7gestartet§8...");
+            }
+            Zyneon.getZyneonServer().stopServer();
+        } else {
+            if (s instanceof Player p) {
+                User u = Zyneon.getAPI().getOnlineUser(p.getUniqueId());
+                u.sendErrorMessage(Strings.noPerms());
+            } else {
+                s.sendMessage(Strings.noPerms());
             }
         }
         return false;

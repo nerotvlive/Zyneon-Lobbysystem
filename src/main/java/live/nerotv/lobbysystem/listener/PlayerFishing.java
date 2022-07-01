@@ -1,8 +1,8 @@
 package live.nerotv.lobbysystem.listener;
 
 import live.nerotv.lobbysystem.api.API;
-import live.nerotv.lobbysystem.api.NewSound;
 import live.nerotv.lobbysystem.api.PlayerAPI;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -17,7 +17,7 @@ public class PlayerFishing implements Listener {
         if(e.getCaught()!=null) {
             if(!(e.getCaught() instanceof Player)) {
                 Player p = e.getPlayer();
-                PlayerAPI.playNewSound(p, NewSound.ENTITY_PLAYER_LEVELUP, 100, 100);
+                p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP,100,100);
                 int i = ThreadLocalRandom.current().nextInt(2, 12 + 1);
                 API.sendMessage(p, "§7Du hast einen Fisch gefangen§8! §d+" + i + " Angelscore");
                 PlayerAPI.updateFishingCount(p, i);

@@ -2,8 +2,8 @@ package live.nerotv.lobbysystem.listener;
 
 import live.nerotv.lobbysystem.Main;
 import live.nerotv.lobbysystem.api.API;
-import live.nerotv.lobbysystem.api.NewSound;
 import live.nerotv.lobbysystem.api.PlayerAPI;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -35,9 +35,9 @@ public class PlayerChat implements Listener {
         if(API.isStringBlocked(MSG)) {
             e.setCancelled(true);
             p.sendMessage("§4Achtung:§c Achte auf deine Wortwahl, oder es wird eine Strafe mit sich führen.");
-            PlayerAPI.playNewSound(p,NewSound.ENTITY_BAT_DEATH);
-            PlayerAPI.playNewSound(p,NewSound.ENTITY_BLAZE_DEATH);
-            PlayerAPI.playNewSound(p, NewSound.BLOCK_ANVIL_BREAK);
+            p.playSound(p.getLocation(), Sound.ENTITY_BAT_DEATH,100,100);
+            p.playSound(p.getLocation(), Sound.ENTITY_BLAZE_DEATH,100,100);
+            p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK,100,100);
             API.sendConsoleMessage("§4"+p.getName()+"§c hat versucht §4\""+MSG+"§4\"§c zu schreiben, die Nachricht wurde aber blockiert!");
         } else {
             e.setFormat("%name%§8 » §7%msg%".replace("%name%", Name).replace("%msg%", MSG));

@@ -1,6 +1,7 @@
 package live.nerotv.lobbysystem.manager;
 
 import com.zyneonstudios.api.paper.Zyneon;
+import com.zyneonstudios.api.utils.Strings;
 import live.nerotv.lobbysystem.Main;
 import live.nerotv.lobbysystem.api.API;
 import live.nerotv.lobbysystem.api.ConfigAPI;
@@ -67,7 +68,7 @@ public class BroadcastManager {
         int scheduleId = scheduler.scheduleSyncDelayedTask(Main.instance, () -> {
             Integer size = Messages.size();
             Integer random = ThreadLocalRandom.current().nextInt(0,size);
-            Bukkit.broadcastMessage(API.Prefix+Messages.get(random).replace("&","§"));
+            Bukkit.broadcastMessage(Strings.prefix()+Messages.get(random).replace("&","§"));
             startBroadcastTimer(scheduler);
         }, cfg.getLong("Core.Settings.Broadcasts.SecondInterval")*20);
     }

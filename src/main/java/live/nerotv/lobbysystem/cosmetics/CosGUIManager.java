@@ -1,7 +1,6 @@
 package live.nerotv.lobbysystem.cosmetics;
 
 import live.nerotv.lobbysystem.Main;
-import live.nerotv.lobbysystem.api.NewSound;
 import live.nerotv.lobbysystem.api.PlayerAPI;
 import live.nerotv.lobbysystem.manager.GUIManager;
 import live.nerotv.lobbysystem.manager.ItemManager;
@@ -71,7 +70,8 @@ public class CosGUIManager {
     public static void openCosmeticsInventory(Player p) {
         Inventory cosmeticsInventory = Bukkit.createInventory(null,9,"§bCosmetics");
         GUIManager.fillInventory(cosmeticsInventory);
-        PlayerAPI.playNewSound(p,NewSound.ENTITY_CHICKEN_EGG);
+
+        p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG,100,100);
         if(!PlayerAPI.hasAnimations(p)) {
             cosmeticsInventory.setItem(1, CosItemManager.hats);
             cosmeticsInventory.setItem(2, CosItemManager.chests);
@@ -117,7 +117,7 @@ public class CosGUIManager {
     public static void openChestsInventory(Player p) {
         Inventory chestsInventory = Bukkit.createInventory(null,9,"§bOberteile");
         GUIManager.fillInventory(chestsInventory);
-        PlayerAPI.playNewSound(p,NewSound.ENTITY_CHICKEN_EGG);
+        p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG,100,100);
         if(!PlayerAPI.hasAnimations(p)) {
             chestsInventory.setItem(4, CosItemManager.goldChest(false));
             chestsInventory.setItem(3, CosItemManager.ironChest(false));
@@ -163,7 +163,7 @@ public class CosGUIManager {
     public static void openLeggingsInventory(Player p) {
         Inventory chestsInventory = Bukkit.createInventory(null,9,"§bOberteile");
         GUIManager.fillInventory(chestsInventory);
-        PlayerAPI.playNewSound(p,NewSound.ENTITY_CHICKEN_EGG);
+        p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG,100,100);
         if(!PlayerAPI.hasAnimations(p)) {
             chestsInventory.setItem(4, CosItemManager.goldLeggings(false));
             chestsInventory.setItem(3, CosItemManager.ironLeggings(false));
@@ -248,13 +248,13 @@ public class CosGUIManager {
                 }
             }.startTicks();
         }
-        PlayerAPI.playNewSound(p,NewSound.ENTITY_CHICKEN_EGG);
+        p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG,100,100);
         p.openInventory(chestsInventory);
     }
 
     public static void openSkullInventory(Player p) {
         GUIManager.fillInventory(skullInventory);
-        PlayerAPI.playNewSound(p,NewSound.ENTITY_CHICKEN_EGG);
+        p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG,100,100);
         if(!PlayerAPI.hasAnimations(p)) {
             skullInventory.setItem(10, i10);
             skullInventory.setItem(11, i11);

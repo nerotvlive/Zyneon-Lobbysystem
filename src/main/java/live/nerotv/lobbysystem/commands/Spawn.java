@@ -1,8 +1,8 @@
 package live.nerotv.lobbysystem.commands;
 
-import live.nerotv.lobbysystem.api.NewSound;
 import live.nerotv.lobbysystem.api.PlayerAPI;
 import live.nerotv.lobbysystem.api.WarpAPI;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -16,7 +16,7 @@ public class Spawn implements CommandExecutor {
             if(s instanceof Player) {
                 Player p = (Player)s;
                 p.teleport(WarpAPI.getWarp("Spawn"));
-                PlayerAPI.playNewSound(p,NewSound.ENTITY_CHICKEN_EGG);
+                p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG,100,100);
             } else {
                 s.sendMessage("§cDazu §4musst§c du ein Spieler sein§4!");
             }
