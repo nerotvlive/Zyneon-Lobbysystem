@@ -1,7 +1,6 @@
 package live.nerotv.lobbysystem.manager;
 
-import com.zyneonstudios.api.Zyneon;
-import com.zyneonstudios.api.utils.ZyneonAPI;
+import com.zyneonstudios.api.paper.Zyneon;
 import live.nerotv.lobbysystem.Main;
 import live.nerotv.lobbysystem.api.API;
 import live.nerotv.lobbysystem.api.ConfigAPI;
@@ -10,16 +9,14 @@ import live.nerotv.lobbysystem.commands.Nametags;
 import live.nerotv.lobbysystem.jumper.Jumper;
 import live.nerotv.lobbysystem.jumper.JumperAPI;
 import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitScheduler;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
+
 import static org.bukkit.Bukkit.getServer;
 
 public class BroadcastManager {

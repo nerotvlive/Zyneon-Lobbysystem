@@ -1,6 +1,6 @@
 package live.nerotv.lobbysystem.listener;
 
-import com.zyneonstudios.api.Zyneon;
+import com.zyneonstudios.api.paper.Zyneon;
 import live.nerotv.lobbysystem.Main;
 import live.nerotv.lobbysystem.api.*;
 import live.nerotv.lobbysystem.cosmetics.CosGUIManager;

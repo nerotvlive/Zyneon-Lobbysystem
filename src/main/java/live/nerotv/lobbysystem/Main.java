@@ -1,6 +1,6 @@
 package live.nerotv.lobbysystem;
 
-import com.zyneonstudios.api.Zyneon;
+import com.zyneonstudios.api.paper.Zyneon;
 import live.nerotv.Preloader;
 import live.nerotv.lobbysystem.api.API;
 import live.nerotv.lobbysystem.api.WorldAPI;

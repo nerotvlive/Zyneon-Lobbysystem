@@ -1,6 +1,6 @@
 package live.nerotv.lobbysystem.commands;
 
-import com.zyneonstudios.api.Zyneon;
+import com.zyneonstudios.api.paper.Zyneon;
 import live.nerotv.lobbysystem.api.API;
 import live.nerotv.lobbysystem.api.PlayerAPI;
 import live.nerotv.lobbysystem.utils.MessageResolver;

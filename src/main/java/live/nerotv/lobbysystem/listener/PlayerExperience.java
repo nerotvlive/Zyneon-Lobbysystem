@@ -1,7 +1,6 @@
 package live.nerotv.lobbysystem.listener;
 
-import com.zyneonstudios.api.Zyneon;
-import live.nerotv.lobbysystem.api.API;
+import com.zyneonstudios.api.paper.Zyneon;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerExpChangeEvent;

@@ -3,7 +3,7 @@ package live.nerotv.lobbysystem.utils;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
 import com.google.gson.JsonObject;
-import com.zyneonstudios.api.Zyneon;
+import com.zyneonstudios.api.paper.Zyneon;
 import live.nerotv.lobbysystem.api.NewSound;
 import live.nerotv.lobbysystem.api.PlayerAPI;
 import org.bukkit.Bukkit;

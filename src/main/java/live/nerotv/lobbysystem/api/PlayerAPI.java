@@ -1,7 +1,7 @@
 package live.nerotv.lobbysystem.api;
 
-import com.zyneonstudios.api.Zyneon;
-import com.zyneonstudios.api.utils.user.User;
+import com.zyneonstudios.api.paper.Zyneon;
+import com.zyneonstudios.api.paper.utils.user.User;
 import live.nerotv.lobbysystem.Main;
 import live.nerotv.lobbysystem.commands.Nametags;
 import live.nerotv.lobbysystem.jumper.Jumper;
@@ -13,7 +13,6 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.*;
 import java.io.File;
-import java.util.UUID;
 
 public class PlayerAPI {
 
