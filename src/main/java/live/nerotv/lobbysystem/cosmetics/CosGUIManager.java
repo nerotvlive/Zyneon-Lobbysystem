@@ -77,7 +77,7 @@ public class CosGUIManager {
             cosmeticsInventory.setItem(2, CosItemManager.chests);
             cosmeticsInventory.setItem(4, CosItemManager.leggings);
             cosmeticsInventory.setItem(5, CosItemManager.boots);
-            cosmeticsInventory.setItem(7, ItemManager.BackPS);
+            cosmeticsInventory.setItem(7, ItemManager.BackEX);
         } else {
             new Countdown(5, Main.get()) {
                 @Override
@@ -106,7 +106,7 @@ public class CosGUIManager {
                         if (p.getOpenInventory().getTopInventory() == cosmeticsInventory) {
                             p.playSound(p.getLocation(), Sound.ITEM_BUNDLE_DROP_CONTENTS, 1, 255);
                         }
-                        cosmeticsInventory.setItem(7, ItemManager.BackPS);
+                        cosmeticsInventory.setItem(7, ItemManager.BackEX);
                     }
                 }
             }.startTicks();
