@@ -167,9 +167,14 @@ public class ItemManager {
             "§bMusik §8(§cBETA§8)"
     );
 
+    public static ItemStack jumper = createGuiItem(
+            Material.DIAMOND_BOOTS,
+            "§bJumper"
+    );
+
     public static ItemStack Maps = createGuiItem(
             Material.CHEST,
-            "§dMaps"
+            "§9Maps"
     );
 
     public static ItemStack Lobby = createGuiItem(
@@ -253,12 +258,12 @@ public class ItemManager {
 
     public static ItemStack Cosmetics = createGuiItem(
             Material.LEATHER_CHESTPLATE,
-            "§dCosmetics"
+            "§9Cosmetics"
     );
 
     public static ItemStack Gadgets = createGuiItem(
             Material.FEATHER,
-            "§dGadgets"
+            "§9Gadgets"
     );
 
     public static ItemStack Profile(Player p) {
@@ -290,7 +295,7 @@ public class ItemManager {
 
     public static ItemStack Extras = createGuiItem(
             Material.TURTLE_HELMET,
-            "§dCosmetics"
+            "§9Cosmetics"
     );
 
     public static ItemStack MiniMusic = createGuiItem(
@@ -305,7 +310,7 @@ public class ItemManager {
 
     public static ItemStack Settings = createGuiItem(
             Material.COMPARATOR,
-            "§dEinstellungen"
+            "§9Einstellungen"
     );
 
     public static ItemStack barrierHolder = createGuiItem(

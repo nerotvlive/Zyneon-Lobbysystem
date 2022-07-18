@@ -103,7 +103,7 @@ public class PlayerInteract implements Listener {
                                 } else if (Name.equals("§bFreunde- und Partysystem")) {
                                     p.performCommand("friendsgui");
                                     p.playSound(p.getLocation(), Sound.ENTITY_CHICKEN_EGG, 100, 100);
-                                } else if (Name.equals("§dMaps")) {
+                                } else if (Name.equals("§9Maps")) {
                                     GUIManager.openMapsInventory(p);
                                 } else if (Name.equals("§bMinigames")) {
                                     p.performCommand(ConfigAPI.CFG.getString("Core.Minigames.Command"));
@@ -127,7 +127,7 @@ public class PlayerInteract implements Listener {
                             String Name = ItemMeta.getDisplayName();
                             if (Name.equals("§bNavigator")) {
                                 GUIManager.openCompassInventory(p);
-                            } else if (Name.equals("§dMaps")) {
+                            } else if (Name.equals("§9Maps")) {
                                 GUIManager.openMapsInventory(p);
                             } else if (Name.equals("§bProfil")) {
                                 p.performCommand("friendsgui");

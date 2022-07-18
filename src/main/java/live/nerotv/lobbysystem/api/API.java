@@ -45,11 +45,11 @@ public class API {
 
     public static void initConfig() {
         //INIT
-        ConfigAPI.checkEntry("Core.Init.Line01","§5█§5█§5█§5█§5█§5█§5█§8╗§5█§5█§8╗§8░§8░§8░§5█§5█§8╗§5█§5█§5█§8╗§8░§8░§5█§5█§8╗§5█§5█§5█§5█§5█§5█§5█§8╗§8░§5█§5█§5█§5█§5█§8╗§8░§5█§5█§5█§8╗§8░§8░§5█§5█§8╗",Config,cfg);
-        ConfigAPI.checkEntry("Core.Init.Line02","§8╚§8═§8═§8═§8═§5█§5█§8║§8╚§5█§5█§8╗§8░§5█§5█§8╔§8╝§5█§5█§5█§5█§8╗§8░§5█§5█§8║§5█§5█§8╔§8═§8═§8═§8═§8╝§5█§5█§8╔§8═§8═§5█§5█§8╗§5█§5█§5█§5█§8╗§8░§5█§5█§8║",Config,cfg);
-        ConfigAPI.checkEntry("Core.Init.Line03","§8░§8░§5█§5█§5█§8╔§8═§8╝§8░§8╚§5█§5█§5█§5█§8╔§8╝§8░§5█§5█§8╔§5█§5█§8╗§5█§5█§8║§5█§5█§5█§5█§5█§8╗§8░§8░§5█§5█§8║§8░§8░§5█§5█§8║§5█§5█§8╔§5█§5█§8╗§5█§5█§8║",Config,cfg);
-        ConfigAPI.checkEntry("Core.Init.Line04","§5█§5█§8╔§8═§8═§8╝§8░§8░§8░§8░§8╚§5█§5█§8╔§8╝§8░§8░§5█§5█§8║§8╚§5█§5█§5█§5█§8║§5█§5█§8╔§8═§8═§8╝§8░§8░§5█§5█§8║§8░§8░§5█§5█§8║§5█§5█§8║§8╚§5█§5█§5█§5█§8║",Config,cfg);
-        ConfigAPI.checkEntry("Core.Init.Line05","§5█§5█§5█§5█§5█§5█§5█§8╗§8░§8░§8░§5█§5█§8║§8░§8░§8░§5█§5█§8║§8░§8╚§5█§5█§5█§8║§5█§5█§5█§5█§5█§5█§5█§8╗§8╚§5█§5█§5█§5█§5█§8╔§8╝§5█§5█§8║§8░§8╚§5█§5█§5█§8║",Config,cfg);
+        ConfigAPI.checkEntry("Core.Init.Line01","§9█§9█§9█§9█§9█§9█§9█§8╗§9█§9█§8╗§8░§8░§8░§9█§9█§8╗§9█§9█§9█§8╗§8░§8░§9█§9█§8╗§9█§9█§9█§9█§9█§9█§9█§8╗§8░§9█§9█§9█§9█§9█§8╗§8░§9█§9█§9█§8╗§8░§8░§9█§9█§8╗",Config,cfg);
+        ConfigAPI.checkEntry("Core.Init.Line02","§8╚§8═§8═§8═§8═§9█§9█§8║§8╚§9█§9█§8╗§8░§9█§9█§8╔§8╝§9█§9█§9█§9█§8╗§8░§9█§9█§8║§9█§9█§8╔§8═§8═§8═§8═§8╝§9█§9█§8╔§8═§8═§9█§9█§8╗§9█§9█§9█§9█§8╗§8░§9█§9█§8║",Config,cfg);
+        ConfigAPI.checkEntry("Core.Init.Line03","§8░§8░§9█§9█§9█§8╔§8═§8╝§8░§8╚§9█§9█§9█§9█§8╔§8╝§8░§9█§9█§8╔§9█§9█§8╗§9█§9█§8║§9█§9█§9█§9█§9█§8╗§8░§8░§9█§9█§8║§8░§8░§9█§9█§8║§9█§9█§8╔§9█§9█§8╗§9█§9█§8║",Config,cfg);
+        ConfigAPI.checkEntry("Core.Init.Line04","§9█§9█§8╔§8═§8═§8╝§8░§8░§8░§8░§8╚§9█§9█§8╔§8╝§8░§8░§9█§9█§8║§8╚§9█§9█§9█§9█§8║§9█§9█§8╔§8═§8═§8╝§8░§8░§9█§9█§8║§8░§8░§9█§9█§8║§9█§9█§8║§8╚§9█§9█§9█§9█§8║",Config,cfg);
+        ConfigAPI.checkEntry("Core.Init.Line05","§9█§9█§9█§9█§9█§9█§9█§8╗§8░§8░§8░§9█§9█§8║§8░§8░§8░§9█§9█§8║§8░§8╚§9█§9█§9█§8║§9█§9█§9█§9█§9█§9█§9█§8╗§8╚§9█§9█§9█§9█§9█§8╔§8╝§9█§9█§8║§8░§8╚§9█§9█§9█§8║",Config,cfg);
         ConfigAPI.checkEntry("Core.Init.Line06","§8╚§8═§8═§8═§8═§8═§8═§8╝§8░§8░§8░§8╚§8═§8╝§8░§8░§8░§8╚§8═§8╝§8░§8░§8╚§8═§8═§8╝§8╚§8═§8═§8═§8═§8═§8═§8╝§8░§8╚§8═§8═§8═§8═§8╝§8░§8╚§8═§8╝§8░§8░§8╚§8═§8═§8╝",Config,cfg);
 
         //MYSQL
@@ -97,7 +97,7 @@ public class API {
 
         //TABLIST
         ConfigAPI.checkEntry("Core.Tablist.Image","https://nerotv.live/zyneon.png",Config,cfg);
-        ConfigAPI.checkEntry("Core.Tablist.Header"," \n §5zyneonstudios.com §8● §7Minecraft - aber mehr \n ",Config,cfg);
+        ConfigAPI.checkEntry("Core.Tablist.Header"," \n §9zyneonstudios.com §8● §7Minecraft - aber mehr \n ",Config,cfg);
         ConfigAPI.checkEntry("Core.Tablist.Footer"," \n §9https://www.zyneonstudios.com \n §7sponsored by §ftube-hosting.de \n ",Config,cfg);
     }
 
@@ -329,12 +329,12 @@ public class API {
             sendConsoleMessage(cfg.getString("Core.Init.Line06"));
             sendConsoleMessage("§fPlugin by §cnerotvlive§f!");
         } else {
-            sendConsoleMessage("§5Lobbysystem init... §7couldn't find bigfont...");
-            sendConsoleMessage("§dLobbysystem init... §7couldn't find bigfont...");
-            sendConsoleMessage("§5Lobbysystem init... §7couldn't find bigfont...");
-            sendConsoleMessage("§dLobbysystem init... §7couldn't find bigfont...");
-            sendConsoleMessage("§5Lobbysystem init... §7couldn't find bigfont...");
-            sendConsoleMessage("§dLobbysystem init... §7couldn't find bigfont...");
+            sendConsoleMessage("§9Lobbysystem init... §7couldn't find bigfont...");
+            sendConsoleMessage("§9Lobbysystem init... §7couldn't find bigfont...");
+            sendConsoleMessage("§9Lobbysystem init... §7couldn't find bigfont...");
+            sendConsoleMessage("§9Lobbysystem init... §7couldn't find bigfont...");
+            sendConsoleMessage("§9Lobbysystem init... §7couldn't find bigfont...");
+            sendConsoleMessage("§9Lobbysystem init... §7couldn't find bigfont...");
             sendConsoleMessage("§fPlugin by §cnerotvlive§f!");
         }
     }
@@ -538,17 +538,17 @@ public class API {
         int state = animatedState;
         String string = "§fZYNEON";
         if(state == 1) {
-            string = "§5Z§fYNEON";
+            string = "§9Z§fYNEON";
         } else if(state == 2) {
-            string = "§fZ§5Y§fNEON";
+            string = "§fZ§9Y§fNEON";
         } else if(state == 3) {
-            string = "§fZY§5N§fEON";
+            string = "§fZY§9N§fEON";
         } else if(state == 4) {
-            string = "§fZYN§5E§fON";
+            string = "§fZYN§9E§fON";
         } else if(state == 5) {
-            string = "§fZYNE§5O§fN";
+            string = "§fZYNE§9O§fN";
         } else if(state == 6) {
-            string = "§fZYNEO§5N";
+            string = "§fZYNEO§9N";
         }
         return string;
     }

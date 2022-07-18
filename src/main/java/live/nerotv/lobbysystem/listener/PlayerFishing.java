@@ -19,7 +19,7 @@ public class PlayerFishing implements Listener {
                 Player p = e.getPlayer();
                 p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP,100,100);
                 int i = ThreadLocalRandom.current().nextInt(2, 12 + 1);
-                API.sendMessage(p, "§7Du hast einen Fisch gefangen§8! §d+" + i + " Angelscore");
+                API.sendMessage(p, "§7Du hast einen Fisch gefangen§8! §9+" + i + " Angelscore");
                 PlayerAPI.updateFishingCount(p, i);
                 e.getCaught().remove();
                 PlayerAPI.renewScoreboard(p,false);

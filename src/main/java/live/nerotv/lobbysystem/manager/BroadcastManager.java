@@ -52,12 +52,12 @@ public class BroadcastManager {
                 if(JumperAPI.Jumpers.containsKey(p)) {
                     Jumper j = JumperAPI.Jumpers.get(p);
                     if(j.getHighscore()>=j.getStreak()){
-                        p.sendActionBar("§dJumper§8-§dStreak§8: §f" + j.getStreak() + "§7 §8(§7Highscore§8:§7 " + j.getHighscore() + "§8)");
+                        p.sendActionBar("§9Jumper§8-§9Streak§8: §f" + j.getStreak() + "§7 §8(§7Highscore§8:§7 " + j.getHighscore() + "§8)");
                     } else {
-                        p.sendActionBar("§dJumper§8-§dStreak§8: §f" + j.getStreak() + "§7 §8(§7Highscore§8:§7 " + j.getStreak() + "§8)");
+                        p.sendActionBar("§9Jumper§8-§9Streak§8: §f" + j.getStreak() + "§7 §8(§7Highscore§8:§7 " + j.getStreak() + "§8)");
                     }
                 } else {
-                    p.sendActionBar("§7Lust zu spingen§8? §7Mache §d/jumper§8!");
+                    p.sendActionBar("§7Lust zu spingen§8? §7Mache §9/jumper§8!");
                 }
             }
             sendActionbar(scheduler);

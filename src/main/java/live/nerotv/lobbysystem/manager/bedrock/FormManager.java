@@ -22,7 +22,7 @@ public class FormManager {
     public static void openNavigator(Player p) {
         if(PlayerAPI.isBedrock(p)) {
             FloodgatePlayer player = FloodgateApi.getInstance().getPlayer(p.getUniqueId());
-            player.sendForm(SimpleForm.builder().title("§9Navigator").button(ItemManager.CompassItem04.getItemMeta().getDisplayName()).button(ItemManager.CompassItem01.getItemMeta().getDisplayName()).button(ItemManager.CompassItem07.getItemMeta().getDisplayName()).button(ItemManager.CompassItem02.getItemMeta().getDisplayName()).button(ItemManager.CompassItem06.getItemMeta().getDisplayName()).button(ItemManager.CompassItem03.getItemMeta().getDisplayName()).button(ItemManager.CompassItem05.getItemMeta().getDisplayName()).button("§8Zurück").responseHandler((form, responseData) -> {
+            player.sendForm(SimpleForm.builder().title("§9Navigator").button(ItemManager.CompassItem04.getItemMeta().getDisplayName()).button(ItemManager.CompassItem01.getItemMeta().getDisplayName()).button(ItemManager.CompassItem07.getItemMeta().getDisplayName()).button(ItemManager.CompassItem02.getItemMeta().getDisplayName()).button(ItemManager.CompassItem06.getItemMeta().getDisplayName()).button(ItemManager.CompassItem03.getItemMeta().getDisplayName()).button(ItemManager.CompassItem05.getItemMeta().getDisplayName()).button("§bJUMPER").button("§8Zurück").responseHandler((form, responseData) -> {
                 FormResponse response = form.parseResponse(responseData);
                 if(response.isCorrect()&&!response.isClosed()&&!response.isInvalid()||form.parseResponse(responseData).getClickedButton()!=null) {
                     ButtonComponent button = form.parseResponse(responseData).getClickedButton();
@@ -78,18 +78,18 @@ public class FormManager {
     public static void openProfile(Player p) {
         if(PlayerAPI.isBedrock(p)) {
             FloodgatePlayer player = FloodgateApi.getInstance().getPlayer(p.getUniqueId());
-            player.sendForm(SimpleForm.builder().title("§9Profil§8, §9Optionen §8& §9Extras").button("§dCosmetics").button("§dEinstellungen").button("§dFreunde- und Partysystem").button("§8Zurück").responseHandler((form,responseData) -> {
+            player.sendForm(SimpleForm.builder().title("§9Profil§8, §9Optionen §8& §9Extras").button("§9Cosmetics").button("§9Einstellungen").button("§9Freunde- und Partysystem").button("§8Zurück").responseHandler((form,responseData) -> {
                 FormResponse response = form.parseResponse(responseData);
                 if(response.isCorrect()&&!response.isClosed()&&!response.isInvalid()||form.parseResponse(responseData).getClickedButton()!=null) {
                     ButtonComponent button = form.parseResponse(responseData).getClickedButton();
                     String Name = button.getText();
-                    if(Name.equals("§dCosmetics")) {
+                    if(Name.equals("§9Cosmetics")) {
                         p.playSound(p.getLocation(),Sound.ENTITY_CHICKEN_EGG,100,100);
                         API.sendErrorMessage(p,"§cDieses Feature wird für Bedrock-Spieler noch nicht unterstützt!");
-                    } else if(Name.equals("§dFreunde- und Partysystem")) {
+                    } else if(Name.equals("§9Freunde- und Partysystem")) {
                         p.performCommand("friendsgui");
                         p.playSound(p.getLocation(),Sound.ENTITY_CHICKEN_EGG,100,100);
-                    } else if(Name.equals("§dEinstellungen")) {
+                    } else if(Name.equals("§9Einstellungen")) {
                         p.playSound(p.getLocation(),Sound.ENTITY_CHICKEN_EGG,100,100);
                         openSettings(p);
                     }

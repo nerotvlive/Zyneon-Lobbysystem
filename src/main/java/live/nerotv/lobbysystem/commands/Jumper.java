@@ -18,7 +18,7 @@ public class Jumper implements CommandExecutor {
                 if(JumperAPI.Jumpers.containsKey(p)) {
                     API.sendErrorMessage(p,"§cDu spielst bereits einen Jumper§8!");
                 } else {
-                    API.sendMessage(p,"§7Viel Spaß beim Spielen von §dJumper§8!");
+                    API.sendMessage(p,"§7Viel Spaß beim Spielen von §9Jumper§8!");
                     new live.nerotv.lobbysystem.jumper.Jumper(p);
                     PlayerAPI.renewScoreboard(p,false);
                 }

@@ -193,10 +193,10 @@ public class Main {
                 Scoreboard.getTeam("02Premium").setOption(Team.Option.NAME_TAG_VISIBILITY, org.bukkit.scoreboard.Team.OptionStatus.NEVER);
                 Scoreboard.getTeam("03Spieler").setOption(Team.Option.NAME_TAG_VISIBILITY, org.bukkit.scoreboard.Team.OptionStatus.NEVER);
             }
-            Scoreboard.getTeam("00000Team").setPrefix("§5Team §8● §f");
-            Scoreboard.getTeam("01Creator").setPrefix("§5Creator §8● §f");
-            Scoreboard.getTeam("02Premium").setPrefix("§dPremium §8● §f");
-            Scoreboard.getTeam("03Spieler").setPrefix("§dUser §8● §f");
+            Scoreboard.getTeam("00000Team").setPrefix("§9Team §8● §f");
+            Scoreboard.getTeam("01Creator").setPrefix("§9Creator §8● §f");
+            Scoreboard.getTeam("02Premium").setPrefix("§9Premium §8● §f");
+            Scoreboard.getTeam("03Spieler").setPrefix("§9User §8● §f");
             Scoreboard.getTeam("00000Team").setCanSeeFriendlyInvisibles(false);
             Scoreboard.getTeam("01Creator").setCanSeeFriendlyInvisibles(false);
             Scoreboard.getTeam("02Premium").setCanSeeFriendlyInvisibles(false);

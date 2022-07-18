@@ -41,7 +41,7 @@ public class PlayerInventory implements Listener {
                     String Name = ItemMeta.getDisplayName();
                     if(Name.equals("§cFrei...§4")) {
                         p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
-                    } else if(Name.contains("JUMPER")) {
+                    } else if(Name.contains("Jumper")) {
                         p.performCommand("jumper");
                         p.playSound(p.getLocation(),Sound.ENTITY_CHICKEN_EGG,100,100);
                     } else if(Name.equals("&cFrei...&4")) {
@@ -315,7 +315,7 @@ public class PlayerInventory implements Listener {
                     } else if(Name.equals("§bMinigames")) {
                         p.performCommand(ConfigAPI.CFG.getString("Core.Minigames.Command"));
                         p.playSound(p.getLocation(),Sound.ENTITY_CHICKEN_EGG,100,100);
-                    } else if (Name.equals("§dExtras")) {
+                    } else if (Name.equals("§9Extras")) {
                         GUIManager.openExtrasInventory(p);
                     } else {
                         p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_BREAK, 100, 100);
