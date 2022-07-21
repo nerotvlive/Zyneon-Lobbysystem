@@ -50,8 +50,6 @@ commands:
   Friends:
     description: Command to open the friends menu
     aliases: [friendsgui,hide,hider,playerhide,playerhider,fgui]
-  Nametags:
-    description: Command to disable the nametags
   Tell:
     description: Sends a private message to another player
     aliases: [w,whisper,t]

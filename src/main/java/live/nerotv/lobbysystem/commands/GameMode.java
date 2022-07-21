@@ -7,10 +7,14 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class GameMode implements CommandExecutor {
+import java.util.ArrayList;
+import java.util.List;
+
+public class GameMode implements CommandExecutor, TabCompleter {
 
     @Override
     public boolean onCommand(@NotNull CommandSender s, @NotNull Command cmd, @NotNull String label, String[] args) {
@@ -118,5 +122,25 @@ public class GameMode implements CommandExecutor {
             }
         }
         return false;
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+        List<String> completer = new ArrayList<>();
+        if(args.length == 1) {
+            completer.add("survival");
+            completer.add("creative");
+            completer.add("adventure");
+            completer.add("spectator");
+            completer.add("0");
+            completer.add("1");
+            completer.add("2");
+            completer.add("3");
+        } else if(args.length == 2) {
+            for(Player all:Bukkit.getOnlinePlayers()) {
+                completer.add(all.getName());
+            }
+        }
+        return completer;
     }
 }

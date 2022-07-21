@@ -93,7 +93,8 @@ public class Main {
         Bukkit.getWorld("Primal2").setAutoSave(false);
         Bukkit.getWorld("Argria1").setAutoSave(false);
         Bukkit.getWorlds().get(0).setAutoSave(true);
-
+        API.initCommandList();
+        PlayerCommand.initBlocked();
     }
 
     private static void initCommands() {
@@ -102,7 +103,7 @@ public class Main {
         API.initCommand(new Fly(),"Fly");
         API.initCommand(new Warp(),"Warp");
         API.initCommand(new World(),"World");
-        API.initCommand(new GameMode(),"Gamemode");
+        API.initCommand(new GameMode(),"Gamemode",true);
         API.initCommand(new Ping(),"Ping");
         API.initCommand(new SRL(),"SRL");
         API.initCommand(new Disconnect(),"Disconnect");
@@ -113,7 +114,6 @@ public class Main {
         API.initCommand(new Back(),"Back");
         API.initCommand(new Goto(),"Goto");
         API.initCommand(new Friends(),"Friends");
-        API.initCommand(new Nametags(),"Nametags");
         API.initCommand(new Tell(),"Tell");
         API.initCommand(new Teleport(),"Teleport");
         API.initCommand(new Broadcast(),"Broadcast");

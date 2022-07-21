@@ -9,18 +9,21 @@ import live.nerotv.lobbysystem.manager.ItemManager;
 import live.nerotv.lobbysystem.pixel.PixelAPI;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
-import org.bukkit.*;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.command.TabCompleter;
+import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
+import org.bukkit.Sound;
+import org.bukkit.WeatherType;
+import org.bukkit.command.*;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
+
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class API {
@@ -28,6 +31,7 @@ public class API {
     public static PluginManager PM = Bukkit.getPluginManager();
     public static String noPerms = Strings.noPerms();
     public static String noPlayer = Strings.playerNotFound();
+    public static Collection<String> commands = new ArrayList<>();
 
     public static ArrayList<String> SubtitleLD = new ArrayList<String>();
     public static ArrayList<String> SubtitleAD = new ArrayList<String>();
@@ -135,6 +139,20 @@ public class API {
 
     public static void initCommand(CommandExecutor command,String commandName) {
         initCommand(command,commandName,false);
+    }
+
+    public static void initCommandList() {
+        for(Command all:PluginCommandYamlParser.parse(Main.get())) {
+            commands.add(all.getName().toLowerCase());
+            for(String aliases:all.getAliases()) {
+                commands.add(aliases.toLowerCase());
+            }
+        }
+        commands.add("party");
+        commands.add("give");
+        commands.add("sit");
+        commands.add("crawl");
+        commands.add("lay");
     }
 
     public static void initCommand(CommandExecutor command,String commandName,Boolean tab) {
